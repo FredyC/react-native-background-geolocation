@@ -17,6 +17,8 @@ import android.os.RemoteException;
 import android.provider.Settings;
 import android.provider.Settings.SettingNotFoundException;
 import android.text.TextUtils;
+import android.Manifest;
+import android.support.v4.app.ActivityCompat;
 
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.Callback;
@@ -55,6 +57,7 @@ public class BackgroundGeolocationModule extends ReactContextBaseJavaModule impl
     public static final String STATIONARY_EVENT = "stationary";
     public static final String ERROR_EVENT = "error";
     private static final Integer MESSENGER_CLIENT_ID = 666;
+    private static final int PERMISSION_REQUEST_CODE = 99;
 
     /** Messenger for communicating with the service. */
     private Messenger mService = null;
